@@ -1,24 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { Routes , RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { ProductModule } from './product/product.module';
+// import { HouseingService } from './services/houseing.service';
+import { UserModule } from './user/user.module';
+
 import { AppComponent } from './app.component';
-import { PropertyCardComponent } from './property/property-card/property-card.component';
-import { PropertyListComponent } from './property-list/property-list.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { BlablaComponent } from './blabla/blabla.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    PropertyCardComponent,
-    PropertyListComponent,
-    NavBarComponent
+    NavBarComponent,
+    BlablaComponent
   ],
   imports: [
     BrowserModule,
+    ProductModule,
+    UserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    // HouseingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

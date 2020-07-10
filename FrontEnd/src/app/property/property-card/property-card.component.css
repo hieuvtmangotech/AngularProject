@@ -1,5 +1,38 @@
-.imghouse{
-  border-radius: 8px;
-  padding: 5px;
+img{
+  height:350px;
   width: 250px;
+}
+.card-img-wapper{
+  overflow: hidden;
+  position: relative;
+}
+.card:hover img{
+  transform: scale(1.2,1.2);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  width: 260px;
+  opacity: .5;
+}
+.card img{
+  transform: scale(1,1);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  width: 260px;
+}
+.member-icon{
+  position: absolute;
+  bottom:-10%;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 0;
+}
+.card-img-wapper:hover .member-icon{
+  bottom:0;
+  opacity: 1;
+}
+
+.animate{
+  transition: all 0.3s ease-in-out;
 }
